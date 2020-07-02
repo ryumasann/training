@@ -1,14 +1,18 @@
 from pybot_eto import eto_command
 from pybot_random import choice_command, dice_command
+from pybot_datetime import weekday_command
 
 def heisei_command(command):
     heisei, year_str = command.split()
-    year = int(year_str)
-    if year >= 1989:
-        heisei_year = year - 1988
-        response = '西暦{}は、平成{}年です。'.format(year, heisei_year)
+    if year_str.isdigit():
+        year = int(year_str)
+        if year >= 1989:
+            heisei_year = year - 1988
+            response = '西暦{}は、平成{}年です。'.format(year, heisei_year)
+        else:
+            response = '西暦は{}平成ではありません。'.format(year)
     else:
-        response = '西暦は{}平成ではありません。'.format(year)
+        response = '数値を指定してください'
     return response
 
 #import os
@@ -41,6 +45,8 @@ while True:
         response = choice_command(command)
     if 'さいころ' in command:
         response = dice_command()
+    if '曜日' in command:
+        response = weekday_command(command)
     
     if not response:
         response = '何言ってるかわからない'
