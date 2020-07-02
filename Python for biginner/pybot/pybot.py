@@ -1,6 +1,7 @@
 from pybot_eto import eto_command
 from pybot_random import choice_command, dice_command
 from pybot_datetime import weekday_command
+from pybot_weather import weather_command
 
 def heisei_command(command):
     heisei, year_str = command.split()
@@ -48,6 +49,9 @@ while True:
             response = dice_command()
         if '曜日' in command:
             response = weekday_command(command)
+        #仮想環境で外部パッケージ(requests)を使用
+        if '天気' in command:
+            response = weather_command()
         
         if not response:
             response = '何言ってるかわからない'
