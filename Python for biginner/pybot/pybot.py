@@ -16,6 +16,7 @@ def heisei_command(command):
         response = '数値を指定してください'
     return response
 
+#デバック用パス
 #import os
 #dic_path= os.path.dirname(__file__) + 'pybot.txt'
 command_file = open('pybot.txt', encoding='utf-8')
