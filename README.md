@@ -1,2 +1,2 @@
 # training
-study history at home
+study history during stay home
