@@ -32,25 +32,30 @@ for line in lines:
 while True:
     command = input('pybot> ')
     response = ''
-    for key in bot_dict:
-        if key in command:
-            response = bot_dict[key]
-            break
-    
-    if '平成' in command:
-        response = heisei_command(command)
-    if '干支' in command:
-        response = eto_command(command)
-    if '選ぶ' in command:
-        response = choice_command(command)
-    if 'さいころ' in command:
-        response = dice_command()
-    if '曜日' in command:
-        response = weekday_command(command)
-    
-    if not response:
-        response = '何言ってるかわからない'
-    print(response)
+    try:
+        for key in bot_dict:
+            if key in command:
+                response = bot_dict[key]
+                break
+        
+        if '平成' in command:
+            response = heisei_command(command)
+        if '干支' in command:
+            response = eto_command(command)
+        if '選ぶ' in command:
+            response = choice_command(command)
+        if 'さいころ' in command:
+            response = dice_command()
+        if '曜日' in command:
+            response = weekday_command(command)
+        
+        if not response:
+            response = '何言ってるかわからない'
+        print(response)
 
-    if "さようなら" in command:
-        break
+        if "さようなら" in command:
+            break
+    except Exception as e:
+        print('予期せぬエラーが発生しました')
+        print('* 種類', type(e))
+        print('* 内容', ｅ)
