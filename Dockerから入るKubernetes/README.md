@@ -1,0 +1,1 @@
+#Dockerから入るKubernetes
