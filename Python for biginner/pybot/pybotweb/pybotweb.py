@@ -5,7 +5,7 @@ from pybot import pybot
 @route('/hello')
 def hello():
     #now = datetime.now()
-    return template('pybot_template', text='', output_text='')
+    return template('pybot_template', text='', input_text='', output_text='')
 
 
 @route('/hello', method='POST')
