@@ -1,0 +1,8 @@
+docker run -p 8080:80
+でport8080で外部からの通信を待ち受けた際に、
+VirtualBox上でDockerを起動しているため、localhostでは接続できない。
+VirtualBoxのipを指定する必要がある。
+
+VirtualBoxの設定はVagrantで行っているため、
+Vagrantfileで指定したIPを使用すると接続可能。
+    machine.vm.network :private_network,ip: "172.16.10.10"
