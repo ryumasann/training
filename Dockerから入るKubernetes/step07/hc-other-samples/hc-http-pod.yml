@@ -1,0 +1,24 @@
+## サンプルコード
+##   HTTP ヘルスチェック 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: probe-http
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 80
+      initialDelaySeconds: 10
+      periodSeconds: 10
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 80
+      initialDelaySeconds: 5
+      periodSeconds: 5
