@@ -1,0 +1,492 @@
+2020-07-06 02:04:01,884 p=7804 u=vagrant n=ansible | [WARNING]: While constructing a mapping from
+/vagrant/playbook/master/tasks/main.yml, line 125, column 3, found a duplicate
+dict key (become_user). Using last defined value only.
+
+2020-07-06 02:04:02,581 p=7804 u=vagrant n=ansible | PLAY [Kubernetes base] *********************************************************
+2020-07-06 02:04:15,083 p=7804 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2020-07-06 02:04:32,492 p=7804 u=vagrant n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host master should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2020-07-06 02:04:32,493 p=7804 u=vagrant n=ansible | ok: [master]
+2020-07-06 02:04:32,521 p=7804 u=vagrant n=ansible | TASK [kubernetes : Change selinux] *********************************************
+2020-07-06 02:04:32,588 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:04:32,630 p=7804 u=vagrant n=ansible | TASK [kubernetes : Stop firewalld] *********************************************
+2020-07-06 02:04:32,674 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:04:32,719 p=7804 u=vagrant n=ansible | TASK [kubernetes : Disable Swap area and delete] *******************************
+2020-07-06 02:04:32,766 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:04:32,797 p=7804 u=vagrant n=ansible | TASK [kubernetes : Add Docker GPG key] *****************************************
+2020-07-06 02:04:38,402 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:04:38,523 p=7804 u=vagrant n=ansible | TASK [kubernetes : Add Docker APT repository] **********************************
+2020-07-06 02:04:56,675 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:04:56,721 p=7804 u=vagrant n=ansible | TASK [kubernetes : Install a list of packages] *********************************
+2020-07-06 02:05:35,901 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:05:35,945 p=7804 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages uninstalled] **********************
+2020-07-06 02:05:35,997 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:05:36,048 p=7804 u=vagrant n=ansible | TASK [kubernetes : Add Docker repository] **************************************
+2020-07-06 02:05:36,112 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:05:36,144 p=7804 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages installed] ************************
+2020-07-06 02:05:36,207 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:05:36,260 p=7804 u=vagrant n=ansible | TASK [kubernetes : Add the user 'vagrant' with a specific uid and a primary group of 'docker'] ***
+2020-07-06 02:05:36,931 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:05:36,959 p=7804 u=vagrant n=ansible | TASK [kubernetes : Start dockerd] **********************************************
+2020-07-06 02:05:37,792 p=7804 u=vagrant n=ansible | ok: [master]
+2020-07-06 02:05:37,824 p=7804 u=vagrant n=ansible | TASK [kubernetes : Add GlusterFS Repository] ***********************************
+2020-07-06 02:06:01,016 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:06:01,053 p=7804 u=vagrant n=ansible | TASK [kubernetes : Install GlusterFS client] ***********************************
+2020-07-06 02:06:17,806 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:06:17,838 p=7804 u=vagrant n=ansible | TASK [kubernetes : Set sysctl] *************************************************
+2020-07-06 02:06:18,493 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:06:18,544 p=7804 u=vagrant n=ansible | TASK [kubernetes : modprobe br_netfilter] **************************************
+2020-07-06 02:06:18,612 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:06:18,663 p=7804 u=vagrant n=ansible | TASK [kubernetes : sysctl] *****************************************************
+2020-07-06 02:06:18,718 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:06:18,758 p=7804 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes apt-key] *************************************
+2020-07-06 02:06:20,716 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:06:20,759 p=7804 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes' APT repository] *****************************
+2020-07-06 02:06:29,404 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:06:29,440 p=7804 u=vagrant n=ansible | TASK [kubernetes : Install kubectl] ********************************************
+2020-07-06 02:06:39,375 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:06:39,407 p=7804 u=vagrant n=ansible | TASK [kubernetes : Install kubelet] ********************************************
+2020-07-06 02:07:12,638 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:07:12,717 p=7804 u=vagrant n=ansible | TASK [kubernetes : Install kubeadm] ********************************************
+2020-07-06 02:07:30,179 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:07:30,228 p=7804 u=vagrant n=ansible | TASK [kubernetes : check exisiting /etc/yum.repos.d/kubernetes.repo] ***********
+2020-07-06 02:07:30,804 p=7804 u=vagrant n=ansible | ok: [master]
+2020-07-06 02:07:30,836 p=7804 u=vagrant n=ansible | TASK [kubernetes : install kubernetes.repo] ************************************
+2020-07-06 02:07:30,889 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:07:30,926 p=7804 u=vagrant n=ansible | TASK [kubernetes : install kubelet kubeadm kubectl] ****************************
+2020-07-06 02:07:30,975 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:07:31,018 p=7804 u=vagrant n=ansible | TASK [kubernetes : enable kubelet] *********************************************
+2020-07-06 02:07:31,407 p=7804 u=vagrant n=ansible | ok: [master]
+2020-07-06 02:07:31,446 p=7804 u=vagrant n=ansible | TASK [kubernetes : change 10-kubeadm.conf for v1.11 or later for Ubuntu] *******
+2020-07-06 02:07:31,975 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:07:32,004 p=7804 u=vagrant n=ansible | TASK [kubernetes : change kubelet.service for CentOS] **************************
+2020-07-06 02:07:32,054 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:07:32,089 p=7804 u=vagrant n=ansible | TASK [kubernetes : daemon-reload and restart kubelet] **************************
+2020-07-06 02:07:32,801 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:07:32,846 p=7804 u=vagrant n=ansible | TASK [master : kubeadm reset v1.11 or later] ***********************************
+2020-07-06 02:07:33,594 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:07:33,624 p=7804 u=vagrant n=ansible | TASK [master : kubeadm init for Ubuntu] ****************************************
+2020-07-06 02:10:16,514 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:16,543 p=7804 u=vagrant n=ansible | TASK [master : create kubeadm join command] ************************************
+2020-07-06 02:10:17,603 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:17,630 p=7804 u=vagrant n=ansible | TASK [master : kubeadm init for CentOS] ****************************************
+2020-07-06 02:10:17,672 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:10:17,706 p=7804 u=vagrant n=ansible | TASK [master : create kubeadm join command] ************************************
+2020-07-06 02:10:17,746 p=7804 u=vagrant n=ansible | skipping: [master]
+2020-07-06 02:10:17,811 p=7804 u=vagrant n=ansible | TASK [master : copy /tmp/kubeadm-join.yaml -> home] ****************************
+2020-07-06 02:10:19,259 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:19,317 p=7804 u=vagrant n=ansible | TASK [master : change config.yaml] *********************************************
+2020-07-06 02:10:19,607 p=7804 u=vagrant n=ansible | ok: [master]
+2020-07-06 02:10:19,659 p=7804 u=vagrant n=ansible | TASK [master : daemon-reload and restart kubelet] ******************************
+2020-07-06 02:10:20,725 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:20,767 p=7804 u=vagrant n=ansible | TASK [master : mkdir kubeconfig] ***********************************************
+2020-07-06 02:10:21,497 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:21,534 p=7804 u=vagrant n=ansible | TASK [master : mkdir /vagrant/kubeconfig] **************************************
+2020-07-06 02:10:21,836 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:21,865 p=7804 u=vagrant n=ansible | TASK [master : chmod admin.conf] ***********************************************
+2020-07-06 02:10:22,136 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:22,167 p=7804 u=vagrant n=ansible | TASK [master : copy config to home dir] ****************************************
+2020-07-06 02:10:22,736 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:22,770 p=7804 u=vagrant n=ansible | TASK [master : Download a manifest of Flannel for k8s ver > 11] ****************
+2020-07-06 02:10:23,325 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:23,356 p=7804 u=vagrant n=ansible | TASK [master : Deploy Flannel] *************************************************
+2020-07-06 02:10:31,193 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:31,236 p=7804 u=vagrant n=ansible | TASK [master : Install Metrics Server] *****************************************
+2020-07-06 02:10:33,980 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:34,014 p=7804 u=vagrant n=ansible | TASK [master : add a new line] *************************************************
+2020-07-06 02:10:35,001 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:35,035 p=7804 u=vagrant n=ansible | TASK [master : Deploy Metrics Server] ******************************************
+2020-07-06 02:10:40,884 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:40,923 p=7804 u=vagrant n=ansible | TASK [master : Download Dashboard Manifest] ************************************
+2020-07-06 02:10:41,936 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:41,976 p=7804 u=vagrant n=ansible | TASK [master : Change Dashboard RBAC] ******************************************
+2020-07-06 02:10:42,244 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:42,280 p=7804 u=vagrant n=ansible | TASK [master : Deploy Dashboard UI] ********************************************
+2020-07-06 02:10:43,298 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:43,347 p=7804 u=vagrant n=ansible | TASK [master : setup kubeconfig] ***********************************************
+2020-07-06 02:10:44,292 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:44,325 p=7804 u=vagrant n=ansible | TASK [master : copy config to host dir] ****************************************
+2020-07-06 02:10:44,847 p=7804 u=vagrant n=ansible | changed: [master]
+2020-07-06 02:10:44,852 p=7804 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2020-07-06 02:10:44,853 p=7804 u=vagrant n=ansible | master                     : ok=38   changed=33   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
+2020-07-06 02:18:35,450 p=7787 u=vagrant n=ansible | PLAY [Kubernetes base] *********************************************************
+2020-07-06 02:18:35,543 p=7787 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2020-07-06 02:18:41,377 p=7787 u=vagrant n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host node1 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2020-07-06 02:18:41,413 p=7787 u=vagrant n=ansible | ok: [node1]
+2020-07-06 02:18:41,449 p=7787 u=vagrant n=ansible | TASK [kubernetes : Change selinux] *********************************************
+2020-07-06 02:18:41,573 p=7787 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 02:18:41,617 p=7787 u=vagrant n=ansible | TASK [kubernetes : Stop firewalld] *********************************************
+2020-07-06 02:18:41,670 p=7787 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 02:18:41,712 p=7787 u=vagrant n=ansible | TASK [kubernetes : Disable Swap area and delete] *******************************
+2020-07-06 02:18:41,783 p=7787 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 02:18:41,824 p=7787 u=vagrant n=ansible | TASK [kubernetes : Add Docker GPG key] *****************************************
+2020-07-06 02:19:35,523 p=7787 u=vagrant n=ansible | fatal: [node1]: FAILED! => {"changed": false, "cmd": "/usr/bin/apt-key add -", "msg": "Warning: apt-key output should not be parsed (stdout is not a terminal)\ngpg: can't connect to the agent: IPC connect call failed", "rc": 2, "stderr": "Warning: apt-key output should not be parsed (stdout is not a terminal)\ngpg: can't connect to the agent: IPC connect call failed\n", "stderr_lines": ["Warning: apt-key output should not be parsed (stdout is not a terminal)", "gpg: can't connect to the agent: IPC connect call failed"], "stdout": "", "stdout_lines": []}
+2020-07-06 02:19:36,500 p=7787 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2020-07-06 02:19:36,630 p=7787 u=vagrant n=ansible | node1                      : ok=1    changed=0    unreachable=0    failed=1    skipped=3    rescued=0    ignored=0   
+2020-07-06 02:31:56,892 p=7747 u=vagrant n=ansible | PLAY [Kubernetes base] *********************************************************
+2020-07-06 02:31:56,983 p=7747 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2020-07-06 02:32:06,231 p=7747 u=vagrant n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host node2 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2020-07-06 02:32:06,371 p=7747 u=vagrant n=ansible | ok: [node2]
+2020-07-06 02:32:06,469 p=7747 u=vagrant n=ansible | TASK [kubernetes : Change selinux] *********************************************
+2020-07-06 02:32:06,671 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:32:06,813 p=7747 u=vagrant n=ansible | TASK [kubernetes : Stop firewalld] *********************************************
+2020-07-06 02:32:06,920 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:32:06,974 p=7747 u=vagrant n=ansible | TASK [kubernetes : Disable Swap area and delete] *******************************
+2020-07-06 02:32:07,070 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:32:07,131 p=7747 u=vagrant n=ansible | TASK [kubernetes : Add Docker GPG key] *****************************************
+2020-07-06 02:32:11,461 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:32:11,514 p=7747 u=vagrant n=ansible | TASK [kubernetes : Add Docker APT repository] **********************************
+2020-07-06 02:32:49,154 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:32:49,217 p=7747 u=vagrant n=ansible | TASK [kubernetes : Install a list of packages] *********************************
+2020-07-06 02:33:48,334 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:33:48,381 p=7747 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages uninstalled] **********************
+2020-07-06 02:33:48,529 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:33:48,558 p=7747 u=vagrant n=ansible | TASK [kubernetes : Add Docker repository] **************************************
+2020-07-06 02:33:48,608 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:33:48,643 p=7747 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages installed] ************************
+2020-07-06 02:33:48,704 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:33:48,849 p=7747 u=vagrant n=ansible | TASK [kubernetes : Add the user 'vagrant' with a specific uid and a primary group of 'docker'] ***
+2020-07-06 02:33:50,913 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:33:50,945 p=7747 u=vagrant n=ansible | TASK [kubernetes : Start dockerd] **********************************************
+2020-07-06 02:33:52,138 p=7747 u=vagrant n=ansible | ok: [node2]
+2020-07-06 02:33:52,174 p=7747 u=vagrant n=ansible | TASK [kubernetes : Add GlusterFS Repository] ***********************************
+2020-07-06 02:34:21,226 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:34:21,363 p=7747 u=vagrant n=ansible | TASK [kubernetes : Install GlusterFS client] ***********************************
+2020-07-06 02:34:43,124 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:34:43,167 p=7747 u=vagrant n=ansible | TASK [kubernetes : Set sysctl] *************************************************
+2020-07-06 02:34:43,864 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:34:43,926 p=7747 u=vagrant n=ansible | TASK [kubernetes : modprobe br_netfilter] **************************************
+2020-07-06 02:34:43,992 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:34:44,026 p=7747 u=vagrant n=ansible | TASK [kubernetes : sysctl] *****************************************************
+2020-07-06 02:34:44,082 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:34:44,129 p=7747 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes apt-key] *************************************
+2020-07-06 02:34:46,149 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:34:46,195 p=7747 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes' APT repository] *****************************
+2020-07-06 02:34:56,974 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:34:57,012 p=7747 u=vagrant n=ansible | TASK [kubernetes : Install kubectl] ********************************************
+2020-07-06 02:35:12,766 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:35:12,803 p=7747 u=vagrant n=ansible | TASK [kubernetes : Install kubelet] ********************************************
+2020-07-06 02:35:48,032 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:35:48,095 p=7747 u=vagrant n=ansible | TASK [kubernetes : Install kubeadm] ********************************************
+2020-07-06 02:36:17,403 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:17,471 p=7747 u=vagrant n=ansible | TASK [kubernetes : check exisiting /etc/yum.repos.d/kubernetes.repo] ***********
+2020-07-06 02:36:18,478 p=7747 u=vagrant n=ansible | ok: [node2]
+2020-07-06 02:36:18,566 p=7747 u=vagrant n=ansible | TASK [kubernetes : install kubernetes.repo] ************************************
+2020-07-06 02:36:18,622 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:36:18,658 p=7747 u=vagrant n=ansible | TASK [kubernetes : install kubelet kubeadm kubectl] ****************************
+2020-07-06 02:36:18,718 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:36:18,760 p=7747 u=vagrant n=ansible | TASK [kubernetes : enable kubelet] *********************************************
+2020-07-06 02:36:19,971 p=7747 u=vagrant n=ansible | ok: [node2]
+2020-07-06 02:36:20,008 p=7747 u=vagrant n=ansible | TASK [kubernetes : change 10-kubeadm.conf for v1.11 or later for Ubuntu] *******
+2020-07-06 02:36:20,561 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:20,594 p=7747 u=vagrant n=ansible | TASK [kubernetes : change kubelet.service for CentOS] **************************
+2020-07-06 02:36:20,649 p=7747 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 02:36:20,694 p=7747 u=vagrant n=ansible | TASK [kubernetes : daemon-reload and restart kubelet] **************************
+2020-07-06 02:36:21,539 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:21,603 p=7747 u=vagrant n=ansible | TASK [node : kubeadm reset] ****************************************************
+2020-07-06 02:36:24,996 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:25,059 p=7747 u=vagrant n=ansible | TASK [node : copy from home to local] ******************************************
+2020-07-06 02:36:25,931 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:26,110 p=7747 u=vagrant n=ansible | TASK [node : include kubeadm join token etc] ***********************************
+2020-07-06 02:36:26,155 p=7747 u=vagrant n=ansible | ok: [node2]
+2020-07-06 02:36:26,195 p=7747 u=vagrant n=ansible | TASK [node : kubeadm join] *****************************************************
+2020-07-06 02:36:42,049 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:42,145 p=7747 u=vagrant n=ansible | TASK [node : change config.yaml] ***********************************************
+2020-07-06 02:36:42,571 p=7747 u=vagrant n=ansible | ok: [node2]
+2020-07-06 02:36:42,617 p=7747 u=vagrant n=ansible | TASK [node : daemon-reload and restart kubelet] ********************************
+2020-07-06 02:36:43,605 p=7747 u=vagrant n=ansible | changed: [node2]
+2020-07-06 02:36:43,615 p=7747 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2020-07-06 02:36:43,620 p=7747 u=vagrant n=ansible | node2                      : ok=24   changed=18   unreachable=0    failed=0    skipped=11   rescued=0    ignored=0   
+2020-07-06 03:01:59,348 p=7671 u=vagrant n=ansible | [WARNING]: While constructing a mapping from
+/vagrant/playbook/master/tasks/main.yml, line 125, column 3, found a duplicate
+dict key (become_user). Using last defined value only.
+
+2020-07-06 03:01:59,859 p=7671 u=vagrant n=ansible | PLAY [Kubernetes base] *********************************************************
+2020-07-06 03:01:59,917 p=7671 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2020-07-06 03:02:01,638 p=7671 u=vagrant n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host master should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2020-07-06 03:02:01,639 p=7671 u=vagrant n=ansible | ok: [master]
+2020-07-06 03:02:01,673 p=7671 u=vagrant n=ansible | TASK [kubernetes : Change selinux] *********************************************
+2020-07-06 03:02:01,731 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:02:01,762 p=7671 u=vagrant n=ansible | TASK [kubernetes : Stop firewalld] *********************************************
+2020-07-06 03:02:01,821 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:02:01,863 p=7671 u=vagrant n=ansible | TASK [kubernetes : Disable Swap area and delete] *******************************
+2020-07-06 03:02:01,928 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:02:01,963 p=7671 u=vagrant n=ansible | TASK [kubernetes : Add Docker GPG key] *****************************************
+2020-07-06 03:02:03,685 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:02:03,719 p=7671 u=vagrant n=ansible | TASK [kubernetes : Add Docker APT repository] **********************************
+2020-07-06 03:02:21,217 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:02:21,251 p=7671 u=vagrant n=ansible | TASK [kubernetes : Install a list of packages] *********************************
+2020-07-06 03:03:19,002 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:03:19,036 p=7671 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages uninstalled] **********************
+2020-07-06 03:03:19,087 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:03:19,118 p=7671 u=vagrant n=ansible | TASK [kubernetes : Add Docker repository] **************************************
+2020-07-06 03:03:19,165 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:03:19,200 p=7671 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages installed] ************************
+2020-07-06 03:03:19,246 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:03:19,285 p=7671 u=vagrant n=ansible | TASK [kubernetes : Add the user 'vagrant' with a specific uid and a primary group of 'docker'] ***
+2020-07-06 03:03:19,997 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:03:20,041 p=7671 u=vagrant n=ansible | TASK [kubernetes : Start dockerd] **********************************************
+2020-07-06 03:03:21,097 p=7671 u=vagrant n=ansible | ok: [master]
+2020-07-06 03:03:21,136 p=7671 u=vagrant n=ansible | TASK [kubernetes : Add GlusterFS Repository] ***********************************
+2020-07-06 03:03:43,854 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:03:43,885 p=7671 u=vagrant n=ansible | TASK [kubernetes : Install GlusterFS client] ***********************************
+2020-07-06 03:04:03,413 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:04:03,453 p=7671 u=vagrant n=ansible | TASK [kubernetes : Set sysctl] *************************************************
+2020-07-06 03:04:04,022 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:04:04,071 p=7671 u=vagrant n=ansible | TASK [kubernetes : modprobe br_netfilter] **************************************
+2020-07-06 03:04:04,122 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:04:04,165 p=7671 u=vagrant n=ansible | TASK [kubernetes : sysctl] *****************************************************
+2020-07-06 03:04:04,242 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:04:04,319 p=7671 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes apt-key] *************************************
+2020-07-06 03:04:06,202 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:04:06,235 p=7671 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes' APT repository] *****************************
+2020-07-06 03:04:15,189 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:04:15,246 p=7671 u=vagrant n=ansible | TASK [kubernetes : Install kubectl] ********************************************
+2020-07-06 03:04:24,710 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:04:24,748 p=7671 u=vagrant n=ansible | TASK [kubernetes : Install kubelet] ********************************************
+2020-07-06 03:04:52,620 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:04:52,651 p=7671 u=vagrant n=ansible | TASK [kubernetes : Install kubeadm] ********************************************
+2020-07-06 03:05:07,876 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:05:07,907 p=7671 u=vagrant n=ansible | TASK [kubernetes : check exisiting /etc/yum.repos.d/kubernetes.repo] ***********
+2020-07-06 03:05:08,418 p=7671 u=vagrant n=ansible | ok: [master]
+2020-07-06 03:05:08,450 p=7671 u=vagrant n=ansible | TASK [kubernetes : install kubernetes.repo] ************************************
+2020-07-06 03:05:08,504 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:05:08,543 p=7671 u=vagrant n=ansible | TASK [kubernetes : install kubelet kubeadm kubectl] ****************************
+2020-07-06 03:05:08,592 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:05:08,626 p=7671 u=vagrant n=ansible | TASK [kubernetes : enable kubelet] *********************************************
+2020-07-06 03:05:08,998 p=7671 u=vagrant n=ansible | ok: [master]
+2020-07-06 03:05:09,031 p=7671 u=vagrant n=ansible | TASK [kubernetes : change 10-kubeadm.conf for v1.11 or later for Ubuntu] *******
+2020-07-06 03:05:09,556 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:05:09,587 p=7671 u=vagrant n=ansible | TASK [kubernetes : change kubelet.service for CentOS] **************************
+2020-07-06 03:05:09,640 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:05:09,677 p=7671 u=vagrant n=ansible | TASK [kubernetes : daemon-reload and restart kubelet] **************************
+2020-07-06 03:05:10,489 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:05:10,558 p=7671 u=vagrant n=ansible | TASK [master : kubeadm reset v1.11 or later] ***********************************
+2020-07-06 03:05:11,332 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:05:11,362 p=7671 u=vagrant n=ansible | TASK [master : kubeadm init for Ubuntu] ****************************************
+2020-07-06 03:07:17,611 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:17,644 p=7671 u=vagrant n=ansible | TASK [master : create kubeadm join command] ************************************
+2020-07-06 03:07:18,857 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:18,917 p=7671 u=vagrant n=ansible | TASK [master : kubeadm init for CentOS] ****************************************
+2020-07-06 03:07:18,996 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:07:19,048 p=7671 u=vagrant n=ansible | TASK [master : create kubeadm join command] ************************************
+2020-07-06 03:07:19,129 p=7671 u=vagrant n=ansible | skipping: [master]
+2020-07-06 03:07:19,219 p=7671 u=vagrant n=ansible | TASK [master : copy /tmp/kubeadm-join.yaml -> home] ****************************
+2020-07-06 03:07:20,289 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:20,369 p=7671 u=vagrant n=ansible | TASK [master : change config.yaml] *********************************************
+2020-07-06 03:07:20,758 p=7671 u=vagrant n=ansible | ok: [master]
+2020-07-06 03:07:20,810 p=7671 u=vagrant n=ansible | TASK [master : daemon-reload and restart kubelet] ******************************
+2020-07-06 03:07:21,848 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:21,927 p=7671 u=vagrant n=ansible | TASK [master : mkdir kubeconfig] ***********************************************
+2020-07-06 03:07:22,762 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:22,800 p=7671 u=vagrant n=ansible | TASK [master : mkdir /vagrant/kubeconfig] **************************************
+2020-07-06 03:07:23,094 p=7671 u=vagrant n=ansible | ok: [master]
+2020-07-06 03:07:23,126 p=7671 u=vagrant n=ansible | TASK [master : chmod admin.conf] ***********************************************
+2020-07-06 03:07:23,403 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:23,433 p=7671 u=vagrant n=ansible | TASK [master : copy config to home dir] ****************************************
+2020-07-06 03:07:23,900 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:23,931 p=7671 u=vagrant n=ansible | TASK [master : Download a manifest of Flannel for k8s ver > 11] ****************
+2020-07-06 03:07:24,496 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:24,533 p=7671 u=vagrant n=ansible | TASK [master : Deploy Flannel] *************************************************
+2020-07-06 03:07:31,605 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:31,650 p=7671 u=vagrant n=ansible | TASK [master : Install Metrics Server] *****************************************
+2020-07-06 03:07:34,279 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:34,401 p=7671 u=vagrant n=ansible | TASK [master : add a new line] *************************************************
+2020-07-06 03:07:35,126 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:35,166 p=7671 u=vagrant n=ansible | TASK [master : Deploy Metrics Server] ******************************************
+2020-07-06 03:07:36,884 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:36,960 p=7671 u=vagrant n=ansible | TASK [master : Download Dashboard Manifest] ************************************
+2020-07-06 03:07:38,041 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:38,077 p=7671 u=vagrant n=ansible | TASK [master : Change Dashboard RBAC] ******************************************
+2020-07-06 03:07:38,407 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:38,450 p=7671 u=vagrant n=ansible | TASK [master : Deploy Dashboard UI] ********************************************
+2020-07-06 03:07:39,704 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:39,763 p=7671 u=vagrant n=ansible | TASK [master : setup kubeconfig] ***********************************************
+2020-07-06 03:07:41,032 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:41,111 p=7671 u=vagrant n=ansible | TASK [master : copy config to host dir] ****************************************
+2020-07-06 03:07:42,252 p=7671 u=vagrant n=ansible | changed: [master]
+2020-07-06 03:07:42,268 p=7671 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2020-07-06 03:07:42,271 p=7671 u=vagrant n=ansible | master                     : ok=38   changed=32   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
+2020-07-06 03:12:29,663 p=7621 u=vagrant n=ansible | PLAY [Kubernetes base] *********************************************************
+2020-07-06 03:12:29,728 p=7621 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2020-07-06 03:12:33,103 p=7621 u=vagrant n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host node1 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2020-07-06 03:12:33,104 p=7621 u=vagrant n=ansible | ok: [node1]
+2020-07-06 03:12:33,151 p=7621 u=vagrant n=ansible | TASK [kubernetes : Change selinux] *********************************************
+2020-07-06 03:12:33,243 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:12:33,279 p=7621 u=vagrant n=ansible | TASK [kubernetes : Stop firewalld] *********************************************
+2020-07-06 03:12:33,336 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:12:33,375 p=7621 u=vagrant n=ansible | TASK [kubernetes : Disable Swap area and delete] *******************************
+2020-07-06 03:12:33,464 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:12:33,501 p=7621 u=vagrant n=ansible | TASK [kubernetes : Add Docker GPG key] *****************************************
+2020-07-06 03:12:36,469 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:12:36,505 p=7621 u=vagrant n=ansible | TASK [kubernetes : Add Docker APT repository] **********************************
+2020-07-06 03:13:04,468 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:13:04,510 p=7621 u=vagrant n=ansible | TASK [kubernetes : Install a list of packages] *********************************
+2020-07-06 03:13:57,190 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:13:57,260 p=7621 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages uninstalled] **********************
+2020-07-06 03:13:57,469 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:13:57,512 p=7621 u=vagrant n=ansible | TASK [kubernetes : Add Docker repository] **************************************
+2020-07-06 03:13:57,573 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:13:57,607 p=7621 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages installed] ************************
+2020-07-06 03:13:57,663 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:13:57,703 p=7621 u=vagrant n=ansible | TASK [kubernetes : Add the user 'vagrant' with a specific uid and a primary group of 'docker'] ***
+2020-07-06 03:13:59,093 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:13:59,126 p=7621 u=vagrant n=ansible | TASK [kubernetes : Start dockerd] **********************************************
+2020-07-06 03:14:00,617 p=7621 u=vagrant n=ansible | ok: [node1]
+2020-07-06 03:14:00,669 p=7621 u=vagrant n=ansible | TASK [kubernetes : Add GlusterFS Repository] ***********************************
+2020-07-06 03:14:28,744 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:14:28,786 p=7621 u=vagrant n=ansible | TASK [kubernetes : Install GlusterFS client] ***********************************
+2020-07-06 03:14:49,134 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:14:49,173 p=7621 u=vagrant n=ansible | TASK [kubernetes : Set sysctl] *************************************************
+2020-07-06 03:14:49,907 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:14:49,951 p=7621 u=vagrant n=ansible | TASK [kubernetes : modprobe br_netfilter] **************************************
+2020-07-06 03:14:50,070 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:14:50,109 p=7621 u=vagrant n=ansible | TASK [kubernetes : sysctl] *****************************************************
+2020-07-06 03:14:50,199 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:14:50,258 p=7621 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes apt-key] *************************************
+2020-07-06 03:14:52,491 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:14:52,529 p=7621 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes' APT repository] *****************************
+2020-07-06 03:15:03,386 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:15:03,436 p=7621 u=vagrant n=ansible | TASK [kubernetes : Install kubectl] ********************************************
+2020-07-06 03:15:17,989 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:15:18,056 p=7621 u=vagrant n=ansible | TASK [kubernetes : Install kubelet] ********************************************
+2020-07-06 03:15:50,706 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:15:50,753 p=7621 u=vagrant n=ansible | TASK [kubernetes : Install kubeadm] ********************************************
+2020-07-06 03:16:12,084 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:12,119 p=7621 u=vagrant n=ansible | TASK [kubernetes : check exisiting /etc/yum.repos.d/kubernetes.repo] ***********
+2020-07-06 03:16:13,308 p=7621 u=vagrant n=ansible | ok: [node1]
+2020-07-06 03:16:13,455 p=7621 u=vagrant n=ansible | TASK [kubernetes : install kubernetes.repo] ************************************
+2020-07-06 03:16:13,536 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:16:13,585 p=7621 u=vagrant n=ansible | TASK [kubernetes : install kubelet kubeadm kubectl] ****************************
+2020-07-06 03:16:13,641 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:16:13,675 p=7621 u=vagrant n=ansible | TASK [kubernetes : enable kubelet] *********************************************
+2020-07-06 03:16:14,625 p=7621 u=vagrant n=ansible | ok: [node1]
+2020-07-06 03:16:14,662 p=7621 u=vagrant n=ansible | TASK [kubernetes : change 10-kubeadm.conf for v1.11 or later for Ubuntu] *******
+2020-07-06 03:16:15,319 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:15,380 p=7621 u=vagrant n=ansible | TASK [kubernetes : change kubelet.service for CentOS] **************************
+2020-07-06 03:16:15,484 p=7621 u=vagrant n=ansible | skipping: [node1]
+2020-07-06 03:16:15,556 p=7621 u=vagrant n=ansible | TASK [kubernetes : daemon-reload and restart kubelet] **************************
+2020-07-06 03:16:16,471 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:16,542 p=7621 u=vagrant n=ansible | TASK [node : kubeadm reset] ****************************************************
+2020-07-06 03:16:18,951 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:18,989 p=7621 u=vagrant n=ansible | TASK [node : copy from home to local] ******************************************
+2020-07-06 03:16:19,922 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:19,980 p=7621 u=vagrant n=ansible | TASK [node : include kubeadm join token etc] ***********************************
+2020-07-06 03:16:20,024 p=7621 u=vagrant n=ansible | ok: [node1]
+2020-07-06 03:16:20,063 p=7621 u=vagrant n=ansible | TASK [node : kubeadm join] *****************************************************
+2020-07-06 03:16:29,381 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:29,461 p=7621 u=vagrant n=ansible | TASK [node : change config.yaml] ***********************************************
+2020-07-06 03:16:29,927 p=7621 u=vagrant n=ansible | ok: [node1]
+2020-07-06 03:16:29,971 p=7621 u=vagrant n=ansible | TASK [node : daemon-reload and restart kubelet] ********************************
+2020-07-06 03:16:31,353 p=7621 u=vagrant n=ansible | changed: [node1]
+2020-07-06 03:16:31,365 p=7621 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2020-07-06 03:16:31,369 p=7621 u=vagrant n=ansible | node1                      : ok=24   changed=18   unreachable=0    failed=0    skipped=11   rescued=0    ignored=0   
+2020-07-06 03:22:19,746 p=7688 u=vagrant n=ansible | PLAY [Kubernetes base] *********************************************************
+2020-07-06 03:22:19,827 p=7688 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2020-07-06 03:22:23,647 p=7688 u=vagrant n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host node2 should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with 
+prior Ansible releases. A future Ansible release will default to using the 
+discovered platform python for this host. See https://docs.ansible.com/ansible/
+2.9/reference_appendices/interpreter_discovery.html for more information. This 
+feature will be removed in version 2.12. Deprecation warnings can be disabled 
+by setting deprecation_warnings=False in ansible.cfg.
+2020-07-06 03:22:23,648 p=7688 u=vagrant n=ansible | ok: [node2]
+2020-07-06 03:22:23,686 p=7688 u=vagrant n=ansible | TASK [kubernetes : Change selinux] *********************************************
+2020-07-06 03:22:23,755 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:22:23,792 p=7688 u=vagrant n=ansible | TASK [kubernetes : Stop firewalld] *********************************************
+2020-07-06 03:22:23,850 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:22:23,908 p=7688 u=vagrant n=ansible | TASK [kubernetes : Disable Swap area and delete] *******************************
+2020-07-06 03:22:23,995 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:22:24,070 p=7688 u=vagrant n=ansible | TASK [kubernetes : Add Docker GPG key] *****************************************
+2020-07-06 03:22:27,166 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:22:27,207 p=7688 u=vagrant n=ansible | TASK [kubernetes : Add Docker APT repository] **********************************
+2020-07-06 03:22:58,498 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:22:58,559 p=7688 u=vagrant n=ansible | TASK [kubernetes : Install a list of packages] *********************************
+2020-07-06 03:23:50,511 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:23:50,599 p=7688 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages uninstalled] **********************
+2020-07-06 03:23:50,939 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:23:50,994 p=7688 u=vagrant n=ansible | TASK [kubernetes : Add Docker repository] **************************************
+2020-07-06 03:23:51,047 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:23:51,089 p=7688 u=vagrant n=ansible | TASK [kubernetes : ensure a list of packages installed] ************************
+2020-07-06 03:23:51,155 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:23:51,194 p=7688 u=vagrant n=ansible | TASK [kubernetes : Add the user 'vagrant' with a specific uid and a primary group of 'docker'] ***
+2020-07-06 03:23:53,336 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:23:53,372 p=7688 u=vagrant n=ansible | TASK [kubernetes : Start dockerd] **********************************************
+2020-07-06 03:23:54,770 p=7688 u=vagrant n=ansible | ok: [node2]
+2020-07-06 03:23:54,807 p=7688 u=vagrant n=ansible | TASK [kubernetes : Add GlusterFS Repository] ***********************************
+2020-07-06 03:24:23,069 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:24:23,119 p=7688 u=vagrant n=ansible | TASK [kubernetes : Install GlusterFS client] ***********************************
+2020-07-06 03:24:46,684 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:24:46,723 p=7688 u=vagrant n=ansible | TASK [kubernetes : Set sysctl] *************************************************
+2020-07-06 03:24:47,585 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:24:47,650 p=7688 u=vagrant n=ansible | TASK [kubernetes : modprobe br_netfilter] **************************************
+2020-07-06 03:24:47,716 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:24:47,756 p=7688 u=vagrant n=ansible | TASK [kubernetes : sysctl] *****************************************************
+2020-07-06 03:24:47,815 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:24:47,851 p=7688 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes apt-key] *************************************
+2020-07-06 03:24:49,874 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:24:49,913 p=7688 u=vagrant n=ansible | TASK [kubernetes : add Kubernetes' APT repository] *****************************
+2020-07-06 03:25:02,225 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:25:02,267 p=7688 u=vagrant n=ansible | TASK [kubernetes : Install kubectl] ********************************************
+2020-07-06 03:25:17,435 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:25:17,497 p=7688 u=vagrant n=ansible | TASK [kubernetes : Install kubelet] ********************************************
+2020-07-06 03:25:54,294 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:25:54,515 p=7688 u=vagrant n=ansible | TASK [kubernetes : Install kubeadm] ********************************************
+2020-07-06 03:26:19,755 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:19,787 p=7688 u=vagrant n=ansible | TASK [kubernetes : check exisiting /etc/yum.repos.d/kubernetes.repo] ***********
+2020-07-06 03:26:21,293 p=7688 u=vagrant n=ansible | ok: [node2]
+2020-07-06 03:26:21,757 p=7688 u=vagrant n=ansible | TASK [kubernetes : install kubernetes.repo] ************************************
+2020-07-06 03:26:21,815 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:26:21,863 p=7688 u=vagrant n=ansible | TASK [kubernetes : install kubelet kubeadm kubectl] ****************************
+2020-07-06 03:26:21,963 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:26:22,025 p=7688 u=vagrant n=ansible | TASK [kubernetes : enable kubelet] *********************************************
+2020-07-06 03:26:22,774 p=7688 u=vagrant n=ansible | ok: [node2]
+2020-07-06 03:26:22,805 p=7688 u=vagrant n=ansible | TASK [kubernetes : change 10-kubeadm.conf for v1.11 or later for Ubuntu] *******
+2020-07-06 03:26:23,456 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:23,490 p=7688 u=vagrant n=ansible | TASK [kubernetes : change kubelet.service for CentOS] **************************
+2020-07-06 03:26:23,547 p=7688 u=vagrant n=ansible | skipping: [node2]
+2020-07-06 03:26:23,590 p=7688 u=vagrant n=ansible | TASK [kubernetes : daemon-reload and restart kubelet] **************************
+2020-07-06 03:26:24,621 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:24,714 p=7688 u=vagrant n=ansible | TASK [node : kubeadm reset] ****************************************************
+2020-07-06 03:26:27,525 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:27,579 p=7688 u=vagrant n=ansible | TASK [node : copy from home to local] ******************************************
+2020-07-06 03:26:28,418 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:28,488 p=7688 u=vagrant n=ansible | TASK [node : include kubeadm join token etc] ***********************************
+2020-07-06 03:26:28,550 p=7688 u=vagrant n=ansible | ok: [node2]
+2020-07-06 03:26:28,595 p=7688 u=vagrant n=ansible | TASK [node : kubeadm join] *****************************************************
+2020-07-06 03:26:37,421 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:37,474 p=7688 u=vagrant n=ansible | TASK [node : change config.yaml] ***********************************************
+2020-07-06 03:26:37,920 p=7688 u=vagrant n=ansible | ok: [node2]
+2020-07-06 03:26:37,971 p=7688 u=vagrant n=ansible | TASK [node : daemon-reload and restart kubelet] ********************************
+2020-07-06 03:26:39,259 p=7688 u=vagrant n=ansible | changed: [node2]
+2020-07-06 03:26:39,279 p=7688 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2020-07-06 03:26:39,283 p=7688 u=vagrant n=ansible | node2                      : ok=24   changed=18   unreachable=0    failed=0    skipped=11   rescued=0    ignored=0   
