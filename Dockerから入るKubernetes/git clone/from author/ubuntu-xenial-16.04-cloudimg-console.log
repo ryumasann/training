@@ -645,3 +645,306 @@ Ubuntu 16.04.6 LTS minikube ttyS0
 minikube login: [   38.191291] cloud-init[1453]: Cloud-init v. 19.4-33-gbb4131a2-0ubuntu1~16.04.1 running 'modules:config' at Tue, 07 Jul 2020 23:57:30 +0000. Up 37.80 seconds.
 [   95.297872] cloud-init[2135]: Cloud-init v. 19.4-33-gbb4131a2-0ubuntu1~16.04.1 running 'modules:final' at Tue, 07 Jul 2020 23:58:27 +0000. Up 95.04 seconds.
 [   95.298452] cloud-init[2135]: Cloud-init v. 19.4-33-gbb4131a2-0ubuntu1~16.04.1 finished at Tue, 07 Jul 2020 23:58:27 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 95.28 seconds
+         Stopping kubelet: The Kubernetes Node Agent...
+         Stopping User Manager for UID 1000...
+         Stopping Authenticate and Authorize Users to Run Privileged Tasks...
+[[0;32m  OK  [0m] Stopped target Timers.
+[[0;32m  OK  [0m] Stopped Message of the Day.
+         Stopping ACPI event daemon...
+         Unmounting RPC Pipe File System...
+[[0;32m  OK  [0m] Stopped target Graphical Interface.
+         Stopping Accounts Service...
+[[0;32m  OK  [0m] Stopped Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Stopped Daily apt download activities.
+         Stopping Session 5 of user vagrant.
+[[0;32m  OK  [0m] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[[0;32m  OK  [0m] Stopped target System Time Synchronized.
+[[0;32m  OK  [0m] Stopped Daily Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Stopped target Cloud-init target.
+[[0;32m  OK  [0m] Stopped Execute cloud user/final scripts.
+[[0;32m  OK  [0m] Stopped Apply the settings specified in cloud-config.
+[[0;32m  OK  [0m] Stopped target Cloud-config availability.
+[[0;32m  OK  [0m] Stopped target Multi-User System.
+         Stopping D-Bus System Message Bus...
+         Stopping Docker Application Container Engine...
+         Stopping System Logging Service...
+[[0;32m  OK  [0m] Stopped target Login Prompts.
+         Stopping Getty on tty1...
+         Stopping Serial Getty on ttyS0...
+         Stopping OpenBSD Secure Shell server...
+         Stopping LXD - container startup/shutdown...
+         Stopping Regular background program processing daemon...
+[[0;32m  OK  [0m] Stopped Wait until snapd is fully seeded.
+         Stopping LSB: Record successful boot for GRUB...
+         Stopping FUSE filesystem for LXC...
+         Stopping Deferred execution scheduler...
+         Stopping LSB: Set the CPU Frequency Scaling governor to "ondemand"...
+         Stopping Virtualbox guest utils...
+         Stopping LSB: automatic crash report generation...
+         Stopping LSB: daemon to balance interrupts for SMP systems...
+         Stopping LSB: Set up cgroupfs mounts....
+         Stopping Session 3 of user vagrant.
+         Stopping LSB: MD monitoring daemon...
+[[0;32m  OK  [0m] Stopped Accounts Service.
+[[0;32m  OK  [0m] Stopped Deferred execution scheduler.
+[[0;32m  OK  [0m] Stopped Regular background program processing daemon.
+[[0;32m  OK  [0m] Stopped ACPI event daemon.
+[[0;32m  OK  [0m] Stopped Authenticate and Authorize Users to Run Privileged Tasks.
+[[0;32m  OK  [0m] Stopped Getty on tty1.
+[[0;32m  OK  [0m] Stopped Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Stopped OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Stopped System Logging Service.
+[[0;32m  OK  [0m] Stopped User Manager for UID 1000.
+[[0;32m  OK  [0m] Stopped kubelet: The Kubernetes Node Agent.
+[[0;32m  OK  [0m] Unmounted RPC Pipe File System.
+[[0;32m  OK  [0m] Stopped Session 5 of user vagrant.
+[[0;32m  OK  [0m] Stopped D-Bus System Message Bus.
+[[0;32m  OK  [0m] Stopped LSB: Set up cgroupfs mounts..
+[[0;32m  OK  [0m] Stopped Session 3 of user vagrant.
+[[0;32m  OK  [0m] Unmounted /var/lib/lxcfs.
+[[0;32m  OK  [0m] Removed slice User Slice of vagrant.
+         Stopping Login Service...
+[[0;32m  OK  [0m] Removed slice system-serial\x2dgetty.slice.
+         Stopping Permit User Sessions...
+[[0;32m  OK  [0m] Stopped /etc/rc.local Compatibility.
+[[0;32m  OK  [0m] Removed slice system-getty.slice.
+[[0;32m  OK  [0m] Stopped LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Stopped FUSE filesystem for LXC.
+[[0;32m  OK  [0m] Stopped Login Service.
+[[0;32m  OK  [0m] Stopped Permit User Sessions.
+[[0;32m  OK  [0m] Stopped target User and Group Name Lookups.
+[[0;32m  OK  [0m] Stopped LSB: Set the CPU Frequency Scaling governor to "ondemand".
+[[0;32m  OK  [0m] Stopped LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Stopped LSB: MD monitoring daemon.
+[[0;32m  OK  [0m] Stopped LSB: daemon to balance interrupts for SMP systems.
+[[0;32m  OK  [0m] Stopped LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Stopped target Remote File Systems.
+[[0;32m  OK  [0m] Stopped target Remote File Systems (Pre).
+         Stopping Login to default iSCSI targets...
+[[0;32m  OK  [0m] Stopped target NFS client services.
+[[0;32m  OK  [0m] Stopped Virtualbox guest utils.
+[[0;32m  OK  [0m] Stopped Login to default iSCSI targets.
+         Stopping iSCSI initiator daemon (iscsid)...
+[[0;32m  OK  [0m] Stopped iSCSI initiator daemon (iscsid).
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...3b3633ddf59186c17706fb80/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/5f59402df24c.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...48d99218af6f66772c2c/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/fe681a58725e.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...b2cb84658f63dde08c74cf1a/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...27d2a422e013828a29a1/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/e185ffb18dc3.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/af0b98c1af37.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...d5476c1c3af4345fb5f7d6a0/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...d549f1729a0a6cff316d/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...9fdf4cba37341f5926f7/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...b551d8ba702ca863b8bf942d/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...ebd154b810bd2e397bd9f6e2/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...2c283caf00dbcdbe6d532c25/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...b24e13c3a00c40b950ea/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...024d4adc3a1591e125b08133/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...856551f394216f928145172b/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...d3d8bb44e01fa8c68a563891/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...4211415151f7b7c4f2b00914/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...454f8e1042e8a8e72440ece3/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...9bc54280b2564ed4d8954fc9/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...fd6c6a86ed6e8d5dbc7b9fa3/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...b4d5a174541602a452601704/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...5eed2ef33f141ff8feedc391/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...926382075110ce7541ee41d4/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...ad6dfebe8959b7a2e7666f77/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...2fe88aa8f24837b0205a7760/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...06487789a951b88dbdc530e2/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...2e3f6ea9fc1d1a204255a8fd/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...e71db01478e552f8b7207b70/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...bfb8f26fed4cfd67f69258d3/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...e44dffd70afc2d784a6fe0bb/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...1ce796d522b6e93e7a143a67/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...a441b378768047d324c4016d/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...4655b3ece3ee86a7b99d/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...b8f2f93cb8bc605d0fd9/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...970d5f55a27aaf3bced4/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...4bf683680acddb77a4f498e8/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...0a4d50e4eefef7977dbb8903/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...459ef841ac3b05bedf5a/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...6996fcc8e1c76b64652c6a13/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...8423b2c0e0980697096b990d/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...b1aa3d487f4a6f54f392/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...b050947934c130355eea410a/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/631642d72da0.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/b46d96ecf59f.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...67c1c3f60a8e794e224b/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...0e54e3cd48df893e83be/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...5e52df3edd0ce9ca8a4ec527/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...059d32b8323adc09cf029f8a/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/75ac8bb1bba6.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...47d392273031bfb1a923/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...5c51662f303428a873098749/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/db1ecf692f0e.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...b68e6bf48e2962482a4e/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/b0603bf1cd98.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/db31f2654ffb.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/3ee122899ca1.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...80213447ca715c86b9096524/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...8d2fc9f9d98d4e2ee555/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...42b2e6704af1d4be09168d97/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...4110d8f3d6bc4db4e892/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...1d4fd97a068271ea51a2/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/2338c352bb57.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...aba3b3e8b942116019a7a9b3/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...202388436ce28312bcd89a87/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...7d3acd9609df70c23222/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...4d906f1be89f826c3edc7d3c/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/38025bbae8db.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...b8ff94d00f54cc76521f/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/0a9e7c193320.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/4656b18e4008.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...f9b69b2c13d6aa0622a6/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...8f0c61280b1e2505e642/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/8ef76b5c2ec0.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/8fb820fa7d3e.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/022072c89a3a.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...c4e60470138edb2c5e6c/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/c0b46b0224f3.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/85438e3c781d.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...4de10822dd878a987b9a8e91/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...a1f0b325f393c9558a2db366/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...d9bdf7c0c6c18af2830b/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...c7c3b1fe9f553876268c/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...ca2efd24ec5885e60aec/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...a19b04444c5a1ccb4c24/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...f5bec4c5be2add487617fb7f/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...a895f89480630f282b015152/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...379afd1084e60bb9a24fbd25/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...d633ed2496a13af23d4a577a/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...d6a0df1c8a27b1f62bd4a3b7/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...afc05bff8d16c72fcdbd0daa/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/2cc68af00b42.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...97064bdd392f7674d800deb2/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...407d029116d60e173cd47e6b/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...76c99d82f9bc4819257f/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...c751d5da6eeef3cbb12d4b7d/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...4d75433c9c24662cd8797489/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...ac5aad6dcd6bb3a989b9c576/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...f857737409e374e91e2136b5/merged.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/c700c07e74c0.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...91fb38cc0fa9ae9a1503/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/0a7edf9b19e6.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...a6839d0a43f3f969887d4844/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...d458c8ff74be40296a459b3c/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...da85a040b8ece8405e2a/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/6552636ca93e.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/9accf31dd325.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/db3a4b98feb3.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...27ce4cf4ba30b88a724b92ff/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...6a1e55feade89c16ae2151f7/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...03f88a7f9db455b06e1e/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...a757dfd4abcb7bfe66ed/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...498514cd381bdbaf9667ec57/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...e63998969614de45b743/mounts/shm.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...32c104eb6bd3e811e5c7df11/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...8f50a0c27b8ea2ee3e77b8a9/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...b92f3ede6dd23a6c07f3373e/merged.
+[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...9d57d617243faf93a4289511/merged.
+[[0;32m  OK  [0m] Stopped Docker Application Container Engine.
+[[0;32m  OK  [0m] Stopped target Network is Online.
+[[0;32m  OK  [0m] Stopped target Network.
+[[0;32m  OK  [0m] Stopped target Basic System.
+[[0;32m  OK  [0m] Stopped target Paths.
+[[0;32m  OK  [0m] Stopped ACPI Events Check.
+[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Stopped target Sockets.
+[[0;32m  OK  [0m] Closed RPCbind Server Activation Socket.
+[[0;32m  OK  [0m] Closed Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Closed ACPID Listen Socket.
+[[0;32m  OK  [0m] Closed D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Closed LXD - unix socket.
+[[0;32m  OK  [0m] Closed Syslog Socket.
+[[0;32m  OK  [0m] Closed UUID daemon activation socket.
+[[0;32m  OK  [0m] Stopped target Slices.
+[[0;32m  OK  [0m] Removed slice User and Session Slice.
+[[0;32m  OK  [0m] Closed Docker Socket for the API.
+[[0;32m  OK  [0m] Stopped target System Initialization.
+[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (metadata service crawler).
+         Stopping Raise network interfaces...
+[[0;32m  OK  [0m] Stopped target Swap.
+         Stopping Load/Save Random Seed...
+[[0;32m  OK  [0m] Stopped target Encrypted Volumes.
+[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
+[[0;32m  OK  [0m] Stopped Raise network interfaces.
+[[0;32m  OK  [0m] Stopped target Local File Systems.
+         Unmounting /var/lib/kubelet/pods/28...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/99...secret/kube-proxy-token-vb84g...
+         Unmounting /var/lib/kubelet/pods/05...io~secret/coredns-token-8j7jd...
+         Unmounting /var/lib/kubelet/pods/51...orage-provisioner-token-nxvwz...
+         Unmounting /var/lib/kubelet/pods/66...io~secret/coredns-token-8j7jd...
+         Unmounting /var/lib/kubelet/pods/fc...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/7e...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/2e...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/da...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/b1...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/70...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/a0...io~secret/default-token-vbknz...
+         Unmounting /vagrant...
+         Unmounting /var/lib/kubelet/pods/81...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/1d...io~secret/default-token-vbknz...
+         Unmounting /run/user/1000...
+         Unmounting /var/lib/kubelet/pods/78...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/6a...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/a4...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/35...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/b8...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/fe...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/16...ret/ingress-nginx-token-m5mkc...
+         Unmounting /run/docker/netns/default...
+         Unmounting /var/lib/kubelet/pods/16...rnetes.io~secret/webhook-cert...
+         Unmounting /var/lib/kubelet/pods/d9...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/83...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/4e...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/5d...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/48...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/62...io~secret/default-token-vbknz...
+         Unmounting /var/lib/kubelet/pods/7c...io~secret/default-token-vbknz...
+[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
+[[0;32m  OK  [0m] Stopped Load Kernel Modules.
+[[0;32m  OK  [0m] Stopped target Network (Pre).
+[[0;32m  OK  [0m] Stopped Initial cloud-init job (pre-networking).
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/28d...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/991...o~secret/kube-proxy-token-vb84g.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/05f...s.io~secret/coredns-token-8j7jd.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/510...storage-provisioner-token-nxvwz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/667...s.io~secret/coredns-token-8j7jd.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/fc5...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/7e5...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/2e7...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/da3...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/b12...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/706...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/a04...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/81c...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/1d1...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /run/user/1000.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/787...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/6a2...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/a46...s.io~secret/default-token-vbknz.
+[[0;1;31mFAILED[0m] Failed unmounting /vagrant.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/35d...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/b82...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/fe1...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/161...ecret/ingress-nginx-token-m5mkc.
+[[0;32m  OK  [0m] Unmounted /run/docker/netns/default.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/161...bernetes.io~secret/webhook-cert.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/d94...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/83b...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/4e7...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/5de...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/48e...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/620...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Unmounted /var/lib/kubelet/pods/7c3...s.io~secret/default-token-vbknz.
+[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
+[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
+[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Reached target Shutdown.
+[ 4195.460969] reboot: Power down
