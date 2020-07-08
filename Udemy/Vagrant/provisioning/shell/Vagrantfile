@@ -15,11 +15,11 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vbguest.auto_update = false
   config.vm.provision "file",
-    source: "~/vagrant/files/git-config",
+    source: "~/.gitconfig",
     destination: "~/.gitconfig"
 
-  fonfig.vm.provision "shell",
-    inline: "yum install k-y git"
+  config.vm.provision "shell",
+    inline: "apt-get install -y git"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
