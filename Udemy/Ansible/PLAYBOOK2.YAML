@@ -1,0 +1,31 @@
+-
+    name: 'Execute a script on all web server nodes and start httpd service'
+    hosts: web_nodes
+    tasks:
+        -
+            name: 'Update entry into /etc/resolv.conf'
+            # 「lineinfile」はファイルに追記する。createである時だけ追加することも可能
+            # http://docs.ansible.com/ansible/lineinfile_module.html
+            lineinfile:
+                path: /etc/resolv.conf
+                line: 'nameserver 10.1.250.10'
+        -
+            name: 'Create a new user'
+            # ユーザーとグループを追加
+            # http://docs.ansible.com/ansible/user_module.html
+            user:
+                name: web_user
+                uid: 1040
+                group: developers
+        -
+        # shellsrcriptを実行する
+        # http://docs.ansible.com/ansible/script_module.html
+            name: 'Execute a script'
+            script: /tmp/install_script.sh
+        -
+        # サービスをある状態にする。
+        # http://docs.ansible.com/ansible/service_module.html
+            name: 'Start httpd service'
+            service:
+                name: httpd
+                state: started
