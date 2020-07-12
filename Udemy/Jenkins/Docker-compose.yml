@@ -1,12 +1,23 @@
 version: '3'
-services: 
+services:
   jenkins:
-    container_name: jenkins
-    image: jenkins
+    container_name: jenkins2
+    # docker pull from official repo.
+    image: jenkins/jenkins
     ports:
       - "8080:8080"
+    #shared directory(local directory:container directory)
     volumes:
       - "$PWD/jenkins_home:/var/jenkins_home"
+    networks:
+      - net
+  remote_host:
+    container_name: remote_host
+    image: remote-host
+    # indicate which Dockerfile to build
+    build:
+      # relative path
+      context: centos7
     networks:
       - net
 networks:
