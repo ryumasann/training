@@ -6,13 +6,13 @@ services:
     image: jenkins/jenkins
     ports:
       - "8080:8080"
-    #shared directory(local directory:container directory)
+    # shared directory(local directory:container directory)
     volumes:
       - "$PWD/jenkins_home:/var/jenkins_home"
     networks:
       - net
   remote_host:
-    container_name: remote_host
+    container_name: remote-host
     image: remote-host
     # indicate which Dockerfile to build
     build:
