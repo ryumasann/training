@@ -3,7 +3,9 @@ services:
   jenkins:
     container_name: jenkins2
     # docker pull from official repo.
-    image: jenkins/jenkins
+    image: jenkins-ansible
+    build:
+      context: jenkins-ansible
     ports:
       - "8080:8080"
     # shared directory(local directory:container directory)
@@ -18,6 +20,8 @@ services:
     build:
       # relative path
       context: centos7
+    volumes:
+      - "$PWD/aws-s3.sh:/tmp/script.sh"
     networks:
       - net
   db_host:
